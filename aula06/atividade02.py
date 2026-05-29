@@ -43,3 +43,18 @@ try:
     
 except Exception as e:
     print(f'Erro no tratamento dos dados {e}')
+
+
+    # ==============================================================================
+
+
+    # juntar dois dataframes com campos exatamentes iguais.
+    # df_merge1 = pd.merge(df_itens, df_produtos, on='codigo_produto')
+
+    # juntar dois dataframes com campos diferentes.
+    # df_merge1 = pd.merge(
+    #     df_itens, 
+    #     df_produtos, 
+    #     left_on='codigo_produto'
+    #     right_on='cliente_codigo'
+    # )
