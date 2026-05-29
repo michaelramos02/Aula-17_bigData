@@ -27,7 +27,9 @@ try:
     df_merge2 = pd.merge(df_merge1, df_pedidos, on='codigo_pedido')
     df_final = pd.merge(df_merge2, df_clientes, on='codigo_cliente')
 
-    df_SaoPaulo = df_final[df_final['cidade'] == 'Sao Paulo']
+    filtros = df_final['cidade'] == 'Sao Paulo'
+
+    df_SaoPaulo = df_final[filtros]
 
     print(df_SaoPaulo[[
         'nome',
