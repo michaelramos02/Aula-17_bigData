@@ -1,13 +1,17 @@
 from sqlalchemy import create_engine    
 import pandas as pd 
+#Necessário para trabalhar com .env 
+from dotenv import load_dotenv
 import os
 
 os.system('cls')
 
-host = 'localHost'
-user = 'root'
-password = ''
-database = 'bd_atividade02'
+load_dotenv()
+
+host = os.getenv('DB_HOST')
+user = os.getenv('DB_USER')
+password = os.getenv('DB_PASSWORD')
+database = os.getenv('DB_DATABASE')
 
 engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}/{database}')
 
