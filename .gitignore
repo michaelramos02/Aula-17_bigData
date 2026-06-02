@@ -1,10 +1,6 @@
 venv/
-
 **/venv/
-
 *.env
-
 *.csv
-
 *.xls
 *.xlsx
